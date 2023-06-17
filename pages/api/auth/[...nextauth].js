@@ -26,17 +26,14 @@ export const authOptions= {
     secret: "PLACE-HERE-ANY-STRING",
      adapter: MongoDBAdapter(clientPromise),
   
-    //  callbacks: {
-    //   session: ({session,token,user}) => {
+     callbacks: {
+      session: ({session,token,user}) => {
       
-    //     if (adminEmails.includes(session?.user?.email)) {
-    //       // console.log(session,token,email)
-    //       return session;
-    //     } else {
-    //       return false;
-    //     }
-    //   },
-    // },
+       
+          return session;
+        
+      },
+    },
     
   
   
