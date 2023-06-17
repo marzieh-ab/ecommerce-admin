@@ -6,7 +6,7 @@ import clientPromise from './../../../lib/mongodb'
 
  
 
-const adminEmails = ['marzieh_abidi@yahoo.com'];
+// const adminEmails = ['marzieh_abidi@yahoo.com'];
 
 export const authOptions= {
     // secret: process.env.SECRET,
@@ -26,17 +26,17 @@ export const authOptions= {
     secret: "PLACE-HERE-ANY-STRING",
      adapter: MongoDBAdapter(clientPromise),
   
-     callbacks: {
-      session: ({session,token,user}) => {
+    //  callbacks: {
+    //   session: ({session,token,user}) => {
       
-        if (adminEmails.includes(session?.user?.email)) {
-          // console.log(session,token,email)
-          return session;
-        } else {
-          return false;
-        }
-      },
-    },
+    //     if (adminEmails.includes(session?.user?.email)) {
+    //       // console.log(session,token,email)
+    //       return session;
+    //     } else {
+    //       return false;
+    //     }
+    //   },
+    // },
     
   
   
