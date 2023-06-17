@@ -12,7 +12,7 @@ export default async function handler(req, res) {
   // console.log(id)
   await mongooseConnect();
 
-  await IsAdminRequest(req, res);
+  // await IsAdminRequest(req, res);
 
   if (method === "GET") {
     if (req.query?.id) {

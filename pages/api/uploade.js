@@ -8,7 +8,7 @@ import { mongooseConnect } from "@/lib/mongoose";
 
 export default async function handler(req, res) {
   await mongooseConnect();
-  await IsAdminRequest(req, res);
+  // await IsAdminRequest(req, res);
 
   const form = new multiparty.Form();
   console.log(form, "form");
